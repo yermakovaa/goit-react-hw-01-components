@@ -16,6 +16,10 @@
   transform: translateX(20px);
 }
 
+.item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
 .status {
   display: block;
   margin-right: 10px;
