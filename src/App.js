@@ -1,11 +1,12 @@
-import Profile from './components/social-profile/Profile';
-import Statistics from './components/statistics/Statistics';
+import Container from './components/Container/Container';
+import Profile from './components/Profile/Profile';
+import Statistics from './components/Statistics/Statistics';
 import user from './data/user.json';
 import statisticalData from './data/statistical-data.json';
 
 function App() {
   return (
-    <div className="container">
+    <Container>
       <Profile
         name={user.name}
         tag={user.tag}
@@ -15,7 +16,7 @@ function App() {
       />
 
       <Statistics title="Upload stats" stats={statisticalData} />
-    </div>
+    </Container>
   );
 }
 
