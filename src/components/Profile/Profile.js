@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
-import defImg from './default.jpg';
+import defImg from '../../img/default.jpg';
 
 function Profile({
   name = 'unknown',

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import RGB from './getRandomColor';
 import s from './StatisticsList.module.css';
-console.log(RGB);
 
 function StatisticsList({ stats }) {
   return (
