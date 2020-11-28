@@ -6,10 +6,9 @@ function FriendListItem({
   avatar = defImg,
   name = 'unknown',
   isOnline = true,
-  id,
 }) {
   return (
-    <li className={s.item} key={id}>
+    <li className={s.item}>
       <span className={isOnline ? `${s.isOnline}` : `${s.isOffline}`}></span>
       <img className={s.avatar} src={avatar} alt={name} width="48" />
       <p className={s.name}>{name}</p>
@@ -21,7 +20,6 @@ FriendListItem.propTypes = {
   avatar: PropTypes.string,
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool,
-  id: PropTypes.number.isRequired,
 };
 
 export default FriendListItem;

@@ -13,13 +13,26 @@ function TransactionHistory({ items }) {
         </tr>
       </thead>
 
-      <tbody>{items.map(TransactionHistoryItem)}</tbody>
+      <tbody>
+        {items.map(({ id, type, amount, currency }) => (
+          <TransactionHistoryItem
+            key={id}
+            type={type}
+            amount={amount}
+            currency={currency}
+          />
+        ))}
+      </tbody>
     </table>
   );
 }
 
 TransactionHistory.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object.isRequired),
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ),
 };
 
 export default TransactionHistory;
